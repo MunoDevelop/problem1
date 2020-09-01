@@ -1,12 +1,21 @@
 import socket 
 
-
 HOST = '127.0.0.1'
 PORT = 5050
 
 client_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM) 
+userId = ""
+while True:
+    print("사용할id 를 입력해 주세요( _ )")
+    userId = input()
+    if '_' in userId:
+        print("_ 를 사용하지 말아 주세요")
+        continue
+    break
 
+    
 client_socket.connect((HOST, PORT)) 
+client_socket.send(userId.encode()) 
 
 
 
@@ -16,15 +25,16 @@ client_socket.connect((HOST, PORT))
 
 # quit를 입력할 때 까지 반복합니다. 
 while True: 
+    try:
+        #message = input('Enter Message : ')
+        
 
-    message = input('Enter Message : ')
-    if message == 'quit':
-    	break
+        #client_socket.send(message.encode()) 
+        data = client_socket.recv(1024) 
 
-    client_socket.send(message.encode()) 
-    data = client_socket.recv(1024) 
-
-    print('Received from the server :',repr(data.decode())) 
+        print('Received from the server :',repr(data.decode())) 
+    except socket.error as e:
+        print("error ::",e)
 
 
 client_socket.close() 
