@@ -20,33 +20,25 @@
  [('client',
    'E:\\GitProject\\problem1\\client\\client\\client.py',
    'PYSOURCE')],
- [('typing',
-   'c:\\program files (x86)\\microsoft visual '
-   'studio\\shared\\python37_64\\lib\\typing.py',
-   'PYMODULE'),
-  ('contextlib',
-   'c:\\program files (x86)\\microsoft visual '
-   'studio\\shared\\python37_64\\lib\\contextlib.py',
-   'PYMODULE'),
-  ('copy',
+ [('copy',
    'c:\\program files (x86)\\microsoft visual '
    'studio\\shared\\python37_64\\lib\\copy.py',
    'PYMODULE'),
-  ('os',
+  ('_py_abc',
    'c:\\program files (x86)\\microsoft visual '
-   'studio\\shared\\python37_64\\lib\\os.py',
+   'studio\\shared\\python37_64\\lib\\_py_abc.py',
    'PYMODULE'),
-  ('subprocess',
+  ('tracemalloc',
    'c:\\program files (x86)\\microsoft visual '
-   'studio\\shared\\python37_64\\lib\\subprocess.py',
+   'studio\\shared\\python37_64\\lib\\tracemalloc.py',
    'PYMODULE'),
-  ('selectors',
+  ('pickle',
    'c:\\program files (x86)\\microsoft visual '
-   'studio\\shared\\python37_64\\lib\\selectors.py',
+   'studio\\shared\\python37_64\\lib\\pickle.py',
    'PYMODULE'),
-  ('signal',
+  ('pprint',
    'c:\\program files (x86)\\microsoft visual '
-   'studio\\shared\\python37_64\\lib\\signal.py',
+   'studio\\shared\\python37_64\\lib\\pprint.py',
    'PYMODULE'),
   ('_strptime',
    'c:\\program files (x86)\\microsoft visual '
@@ -72,9 +64,21 @@
    'c:\\program files (x86)\\microsoft visual '
    'studio\\shared\\python37_64\\lib\\gettext.py',
    'PYMODULE'),
-  ('struct',
+  ('os',
    'c:\\program files (x86)\\microsoft visual '
-   'studio\\shared\\python37_64\\lib\\struct.py',
+   'studio\\shared\\python37_64\\lib\\os.py',
+   'PYMODULE'),
+  ('subprocess',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\subprocess.py',
+   'PYMODULE'),
+  ('selectors',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\selectors.py',
+   'PYMODULE'),
+  ('signal',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\signal.py',
    'PYMODULE'),
   ('ntpath',
    'c:\\program files (x86)\\microsoft visual '
@@ -95,18 +99,6 @@
   ('stat',
    'c:\\program files (x86)\\microsoft visual '
    'studio\\shared\\python37_64\\lib\\stat.py',
-   'PYMODULE'),
-  ('tracemalloc',
-   'c:\\program files (x86)\\microsoft visual '
-   'studio\\shared\\python37_64\\lib\\tracemalloc.py',
-   'PYMODULE'),
-  ('pickle',
-   'c:\\program files (x86)\\microsoft visual '
-   'studio\\shared\\python37_64\\lib\\pickle.py',
-   'PYMODULE'),
-  ('pprint',
-   'c:\\program files (x86)\\microsoft visual '
-   'studio\\shared\\python37_64\\lib\\pprint.py',
    'PYMODULE'),
   ('doctest',
    'c:\\program files (x86)\\microsoft visual '
@@ -139,6 +131,10 @@
   ('unittest.case',
    'c:\\program files (x86)\\microsoft visual '
    'studio\\shared\\python37_64\\lib\\unittest\\case.py',
+   'PYMODULE'),
+  ('contextlib',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\contextlib.py',
    'PYMODULE'),
   ('logging',
    'c:\\program files (x86)\\microsoft visual '
@@ -532,17 +528,21 @@
    'c:\\program files (x86)\\microsoft visual '
    'studio\\shared\\python37_64\\lib\\_compat_pickle.py',
    'PYMODULE'),
+  ('struct',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\struct.py',
+   'PYMODULE'),
   ('fnmatch',
    'c:\\program files (x86)\\microsoft visual '
    'studio\\shared\\python37_64\\lib\\fnmatch.py',
    'PYMODULE'),
+  ('typing',
+   'c:\\program files (x86)\\microsoft visual '
+   'studio\\shared\\python37_64\\lib\\typing.py',
+   'PYMODULE'),
   ('stringprep',
    'c:\\program files (x86)\\microsoft visual '
    'studio\\shared\\python37_64\\lib\\stringprep.py',
-   'PYMODULE'),
-  ('_py_abc',
-   'c:\\program files (x86)\\microsoft visual '
-   'studio\\shared\\python37_64\\lib\\_py_abc.py',
    'PYMODULE'),
   ('threading',
    'c:\\program files (x86)\\microsoft visual '

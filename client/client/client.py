@@ -26,13 +26,13 @@ def acceptMsg():
             
 
             #client_socket.send(message.encode()) 
-            data = client_socket.recv(1024) 
+            data = client_socket.recv(4096) 
 
             print(str(data.decode())) 
         except socket.error as e:
-            print("서버 다운")
-            input()
-
+                print("서버 다운")
+                input()
+    socket.close()
 th = Thread(target = acceptMsg)
 th.start()
 
@@ -47,7 +47,7 @@ while True:
         #data = client_socket.recv(1024) 
 
         #print(str(data.decode())) 
-
+        #acceptMsg()
 
         #print("숫자선택 : ")
         msg = input()

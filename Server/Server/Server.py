@@ -36,11 +36,11 @@ def threaded(client_socket, addr):
             # 데이터가 수신되면 클라이언트에 다시 전송합니다.(에코)
             if gameState == GameState.PLAY_WAIT_INPUT:
                 text = str(client_socket.recv(1024).decode())
-                if isdecimal(text):
+                if text.isdecimal():
                     num = int(text)
                     if num>=1 and num<=3:
                         #playerList 에 해당 플레이어가 있는 경우 해당 selectedNum을 변경 (없는경우는 무반응)
-                        for player in playList:
+                        for player in playerList:
                             if player.socket == client_socket:
                                 player.selectedNum = num
 
