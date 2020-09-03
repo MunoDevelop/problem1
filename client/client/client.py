@@ -1,6 +1,7 @@
 import socket 
 from _thread import *
 from threading import Thread
+import sys
 
 HOST = '127.0.0.1'
 PORT = 5050
@@ -14,10 +15,13 @@ while True:
         print("_ 를 사용하지 말아 주세요")
         continue
     break
+#------------------------- try
+try:
+    client_socket.connect((HOST, PORT)) 
+    client_socket.send(userId.encode()) 
+except socket.error as e:
+    print(e)
 
-    
-client_socket.connect((HOST, PORT)) 
-client_socket.send(userId.encode()) 
 
 def acceptMsg():
     while True: 
@@ -29,6 +33,7 @@ def acceptMsg():
             data = client_socket.recv(4096) 
 
             print(str(data.decode())) 
+            sys.stdout.flush()
         except socket.error as e:
                 print("서버 다운")
                 input()
@@ -36,6 +41,8 @@ def acceptMsg():
 th = Thread(target = acceptMsg)
 th.start()
 
+#def flushPrintBuffer():
+    #timer = threading.Timer(7.0, afterSevenSecond)
 # 키보드로 입력한 문자열을 서버로 전송하고 
 
 # 서버에서 에코되어 돌아오는 메시지를 받으면 화면에 출력합니다. 
