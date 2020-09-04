@@ -78,13 +78,17 @@ def threaded(client_socket, addr):
              
     client_socket.close() 
 
+try:
 #서버소켓의 일반적 세팅
-HOST = '127.0.0.1'
-PORT = 5050
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-server_socket.bind((HOST, PORT)) 
-server_socket.listen() 
+    HOST = '127.0.0.1'
+    PORT = 5050
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
+    server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    server_socket.bind((HOST, PORT)) 
+    server_socket.listen(5) 
+except socket.error as e:
+    print(e)
+    
 
 print('server start')
 
@@ -192,10 +196,13 @@ def afterSevenSecond():
 
 #유저의 연결요청을 처리합니다. 별도의 스레드로 진행됩니다.
 def acceptUser():
+    
     while True:
         try:
+            
 #  유저의 수가 5보다 작을때 게임진행여부와 상관없이 항상 접수처리합니다 (3이상은 관찰자)
             if len(userList)<5:
+                
                 client_socket, addr = server_socket.accept() 
                 # 다른 사용자가 있으면 사용자id리스트를 전송합니다.
                 if len(userList)>0:
@@ -231,8 +238,10 @@ def acceptUser():
                 start_new_thread(threaded, (client_socket, addr)) 
         except socket.error as e:
             print(e)
+            
 
-start_new_thread(acceptUser)
+start_new_thread(acceptUser,())
+
 
 
 while True: 

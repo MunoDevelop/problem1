@@ -42,7 +42,7 @@ th.start()
 #사용자의 입력을 서버에 전송합니다.
 while True: 
     try:
-        msg = input("숫자선택 : ")
+        msg = input()
 
         client_socket.send(msg.encode()) 
     
